@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Resell Point - Заработок на перепродаже брендов">
+    <meta property="og:description" content="Забирай бесплатный гайд по работе с поставщиками!">
+    <meta property="og:image" content="/preview.jpg">
+    <title>Resell Point - Заработок на ресейле</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 45px 35px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .channel-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        .benefits {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            font-size: 15px;
+            color: #444;
+        }
+        .benefit-item::before {
+            content: "✓";
+            color: #f5576c;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 20px;
+            line-height: 1;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.5);
+        }
+        .gift {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        @media (max-width: 480px) {
+            .container { padding: 35px 25px; }
+            .channel-name { font-size: 28px; }
+            .subtitle { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🤫</div>
+        <h1 class="channel-name">Resell Point</h1>
+        <p class="subtitle">Зарабатывай на перепродаже брендов БЕЗ вложений!</p>
+        
+        <div class="benefits">
+            <div class="benefit-item">Проверенные поставщики с x5 наценкой</div>
+            <div class="benefit-item">Готовые схемы продаж для новичков</div>
+            <div class="benefit-item">Гайд по работе в ПОДАРОК</div>
+        </div>
+
+        <a href="https://t.me/ВАШ_КАНАЛ" class="cta-btn" id="tgLink">
+            Забрать гайд бесплатно
+        </a>
+
+        <div class="gift">🎁 Подарок получишь сразу после подписки</div>
+    </div>
+
+    <script>
+        document.getElementById('tgLink').addEventListener('click', () => {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Resell Point',
+                    content_category: 'Education'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
